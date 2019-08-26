@@ -22,14 +22,10 @@ spring:
       hibernate:
         format_sql: true
   cloud:
-    inetutils:
-      preferredNetworks:
-        - eth0
     consul:
       discovery:
         instanceId: ${spring.application.name}:${random.value}
         prefer-ip-address: true
-        deregister: true
 
 logging:
   file: logs/atm-customer-service
