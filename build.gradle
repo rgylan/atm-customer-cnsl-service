@@ -19,6 +19,7 @@ apply plugin: "java"
 apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 apply plugin: "com.jfrog.artifactory"
+apply plugin: 'application'
 
 group 'com.rgy'
 version '1.0-SNAPSHOT'
@@ -55,4 +56,8 @@ dependencies {
 
 bootRun {
     systemProperties System.properties
-} 
+}
+
+springBoot{
+    buildInfo()
+}
